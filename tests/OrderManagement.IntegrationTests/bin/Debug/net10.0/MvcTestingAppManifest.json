@@ -1,0 +1,6 @@
+{
+  "OrderManagement.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "c:\\Projects\\OrderManagement\\src\\OrderManagement.API",
+  "OrderManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "c:\\Projects\\OrderManagement\\src\\OrderManagement.Application",
+  "OrderManagement.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "c:\\Projects\\OrderManagement\\src\\OrderManagement.Domain",
+  "OrderManagement.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "c:\\Projects\\OrderManagement\\src\\OrderManagement.Infrastructure"
+}

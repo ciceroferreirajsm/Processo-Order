@@ -1,0 +1,27 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: order-management-api
+    ports:
+      - "8080:8080"
+    volumes:
+      - sqlite_data:/app/data
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__DefaultConnection=Data Source=/app/data/orders.db
+      - Jwt__Secret=super-secret-key-for-order-management-system-2024-long-enough
+      - Jwt__Issuer=OrderManagement.API
+      - Jwt__Audience=OrderManagement.Client
+      - Jwt__ExpirationMinutes=60
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+
+volumes:
+  sqlite_data:
+    driver: local
